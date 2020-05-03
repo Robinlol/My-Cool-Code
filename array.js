@@ -28,7 +28,7 @@ text(words[index],400,200);
 
 }
 function mousePressed() {
-  index=index +1;
+  index=index + 1;
 
   if(index>= 5){
 
