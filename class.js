@@ -1,28 +1,28 @@
 
-let cow;
-let dog;
+let cow= [];
+
 function setup() {
 
 createCanvas(800,400);  // put setup code here
-cow = new Box(400,200,20,0,0,0);
-dog = new Dog(300,100);
 
-//print(box.x,box.y);
+for(let i=0; i< 100; i++){
+  let x =random(width);
+  let y =random(height);
+  let r =random(50);
+  cow[i] = new Box(x,y,r,0,0,0);
 
 }
-
-
-
+}
 
 
 
 function draw() {
 background(0);
-  cow.show();
-  cow.move();
-  dog.show2();
+for(let i=0; i< 100; i++){
+  cow[i].move();
+  cow[i].show();
 
-
+}
 }
 
 class Box{
@@ -52,27 +52,4 @@ class Box{
 
 
    }
-
-   }
-
-   class Dog {
-     constructor(x,y) {
-
-       this.x=x;
-       this.y=y;
-
-
-
-
-
-     }
-
-
-     show2(){
-       rect(this.x,this.y,100,100);
-
-
-
-
-     }
    }
